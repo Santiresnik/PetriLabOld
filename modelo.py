@@ -17,22 +17,6 @@ from PIL import Image, ImageDraw
 from sklearn.cluster import KMeans
 import zipfile
 
-#from cvlib.object_detection import draw_bbox
-#import cvlib as cv
-
-!pip freeze
-
-!wget --no-check-certificate \
-    "https://figshare.com/ndownloader/files/35973995" \
-    -O "/tmp/Petri_plates.zip" #Se descarga el zip desde el instalador de la pagina
-
-zip_ref = zipfile.ZipFile('/tmp/Petri_plates.zip', 'r') #Opens the zip file in read mode
-zip_ref.extractall('/tmp') #Extracts the files into the /tmp folder
-zip_ref.close()
-
-#img = cv2.imread("/tmp/Petri_plates/IMG_7743ecoli_T0_10^-6_19.JPG")
-
-
 img = cv2.imread("manteca.jpg")
 """
 if img.shape[0] != img.shape[1]:
