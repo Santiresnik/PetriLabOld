@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     res.status(200).send("Hello World!");
 });
 
