@@ -1,13 +1,9 @@
-from typing import Union
 from fastapi import FastAPI
 import numpy as np
-import matplotlib as mpl
-import matplotlib.pyplot as plt
 import cv2
 from numpy.lib.polynomial import poly
 from PIL import Image, ImageDraw
 from fastapi import Request
-#from sklearn.cluster import KMeans
 import urllib.request
 
 app = FastAPI()
@@ -62,7 +58,7 @@ async def process_image(request: Request):
         w = rgb.shape[0]
         h = rgb.shape[1]
         
-        return {"processed_number": str(len(cnt))}
+        return {"predicted_count": str(len(cnt))}
     
     except Exception as e:
         return {"error": str(e)}
